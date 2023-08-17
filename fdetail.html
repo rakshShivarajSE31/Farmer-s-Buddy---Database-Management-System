@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body {font-family: Arial, Helvetica, sans-serif; background-image: url(.jpg); 
+    background-repeat: no-repeat;
+    background-size: auto; 
+    background-color: #cccccc;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;}
+* {box-sizing: border-box}
+
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-bottom:80px;
+	margin-top: 50px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+</head>
+<body>------
+
+<h1><b>FARMER'S DETAILS!!</b></h1>
+<div class="container">
+  <form action="fdetail.php" method="post">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="firstname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lastname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="phone number">Phone Number</label>
+      </div>
+      <div class="col-75">
+        <input type="int" id="phonenumber" name="phonenumber" placeholder="enter phone number..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="russia">RUSSIA</option>
+		  <option value="india">INDIA</option>
+		  <option value="europe">EUROPE</option>
+		  <option value="japan">JAPAN</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="address">Address</label>
+		<input type="text" name="address">
+		
+		<!-- </div>
+      <div class="col-75">
+        <text area id="address" name="address" placeholder="Write " style="height:50px"></textarea>
+      </div> -->
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="city">City</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="city" name="city" placeholder="enter city..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="mail id">Mail-id</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="mail_id" name="mail_id" placeholder="enter your mail id..">
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="bank_name">Bank name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="bank_name" name="bank_name" placeholder="Your bank name..">
+      </div>
+    </div>
+	<div class="row">
+      <div class="col-25">
+        <label for="acoount_number">Account number</label>
+      </div>
+      <div class="col-75">
+        <input type="text"  name="acno" placeholder="Your account number..">
+      </div>
+    </div>
+    <b>-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</b>
+    <h1><b>ENTER CROP DETAILS</b></h1>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="crop_id">Crop ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="crop_id" name="crop_id" placeholder="your crop id is..">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="crop_name">Crop Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="crop_name" name="crop_name" placeholder="crop name..">
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="crop_type">Crop Type</label>
+      </div>
+      <div class="col-75">
+        <select id="crop_type" name="crop_type">
+          <option value="food_crops">Food Crops</option>
+          <option value="cash_crops">Cash crops</option>
+          <option value="plantation_crops">Plantation crops</option>
+		  <option value="horticulture_crops">Horticulture crops</option>
+        </select>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="dom">Date of manufacture</label>
+      </div>
+      <div class="col-75">
+        <input type="date" name="Dom" >
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="price">Price</label>
+      </div>
+      <div class="col-75">
+        <input type="int" id="price" name="price" placeholder="enter the price of the crop..">
+      </div>
+    </div>
+	
+	<div class="row">
+      <input type="submit" value="Submit">
+    </div>
+	<div class="row">
+	  
+  </form>
+  <a href="fup.php">Update</a>   <a href="fretrieve.php">Retrieve</a>   <a href="fdelete.php">Delete</a>
+</div>
+
+</body>
+</html>

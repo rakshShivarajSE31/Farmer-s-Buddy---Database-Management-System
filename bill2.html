@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+.columns {
+    float: left;
+    width: 50%;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #2F4F4F;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    background-color: #2F;
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+}
+
+.price .grey {
+    background-color: #eee;
+    font-size: 20px;
+}
+
+.button {
+    background-color: 808000;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .columns {
+        width: 50%;
+    }
+}
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-bottom:80px;
+	margin-top: 50px;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 50%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 10px;
+  }
+}
+</style>
+
+<body>
+<form action="try.php" method="post" >
+  <div class="container">
+    <h1><p>Payment Page...</p></h1>
+	
+	<div>
+    <label for="email"><b>Fullname</b></label>
+    <input type="text"  name="fname" >
+	</div>
+	<div>
+    <label for="psw"><b>Email</b></label>
+    <input type="email"  name="email" >
+	</div>
+	<div>
+	<b>Address</b>
+    <input type="text"  name="address" >
+	</div>
+	<div>
+	<b>City</b>
+    <input type="text"  name="city" >
+	</div>
+	<div>
+	<b>State</b>
+    <input type="text"  name="state" >
+	</div>
+	<div>
+	<b>Zip</b>
+    <input type="int"  name="zip" >
+	</div>
+	<div>
+	<b>Name on the Card</b>
+    <input type="text"  name="noc" >
+	</div>
+	<div>
+	<b>Card number</b>
+    <input type="int"  name="cno" >
+	</div>
+	<div>
+	<b>Exp month</b>
+    <input type="text"  name="em" >
+	</div>
+	<div>
+	<b>Exp year</b>
+    <input type="int"  name="ey" >
+	</div>
+	<div>
+	<b>Cvv</b>
+    <input type="int"  name="cvv" >
+	</div>
+   
+	<div>
+      <button type="submit" class="btn">Confirm Order</button>
+	</div>
+	  
+	   </a>
+
+  </div>
+</form>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Information about Cops and its quantities with its price</h2>
+
+<table>
+  <tr>
+    <th>Crops</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Rice</td>
+    <td>1 to 10 kg,s  10 to 25kg's  25 to 50kg's</td>
+    <td>300/-  550/-  1000/-</td>
+  </tr>
+  <tr>
+    <td>Wheat</td>
+    <td>1 to 10 kg,s  10 to 25kg's  25 to 50kg's</td>
+    <td>300/-  550/-  1000/-</td>
+  </tr>
+  <tr>
+    <td>Cotton</td>
+    <td>1 to 10 kg,s  10 to 25kg's  25 to 50kg's</td>
+    <td>300/-  550/-  1000/-</td>
+  </tr>
+  <tr>
+    <td>Paddy</td>
+    <td>1 to 10 kg,s  10 to 25kg's  25 to 50kg's</td>
+    <td>300/-  550/-  1000/-</td>
+  </tr>
+  
+</table>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+</style>
+</head>
+<body>
+
+<p>Click on the icon to go with for CASH ON DELIVERY...!!</p>
+
+<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+
+<script>
+function myFunction(x) {
+    x.classList.toggle("fa-thumbs-down");
+}
+</script>
+
+
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>CASH ON DELIVERY TABLE WITH SHIPPING CHARGES!!</h2>
+
+<table>
+  <tr>
+    <th>Shipping (in Kms.)</th>
+    <th>Shipping Rate</th>
+  </tr>
+  <tr>
+    <td>within 5 Kms</td>
+	<td>75/-</td>
+  </tr>
+  <tr>
+    <td>Within 10 KMs</td>
+	<td>100/-</td>
+  </tr>
+  <tr>
+    <td>Within 25 KMs</td>
+	<td>150/-</td>
+  </tr>
+  <tr>
+	<td>Within 50 KMs</td>
+	<td>200/-</td>
+  </tr>
+</table>
+</body>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+</style>
+</head>
+<body>
+
+<h1>THANK YOU</h1>
+<h3>Hover over the image below:</h3>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="https://png.pngtree.com/element_pic/17/09/14/74892a82f30d8c2c6f00f1397257100b.jpg" alt="Avatar" style="width:300px;height:300px;" align="center">
+    </div>
+    <div class="flip-card-back">
+      <h1>Have a good day!!</h1> 
+      <p>Please visit again</p> 
+      <p>JAI JAWAN, JAI KISAN</p>
+    </div>
+  </div>
+</div>
+
+
+ <a href="bup.php"><b><u>Update</b></u></a>     <a href="bretrieve.php"><b><u>Retrieve</b></u></a>       <a href="bdelete.php"><b><u>Delete</b></u></a>
+
+
+</body>
+</html>
